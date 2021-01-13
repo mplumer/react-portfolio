@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
-import About from "./components/Header/Navigation/About";
-import Portfolio from "./components/Header/Navigation/Portfolio";
-import Resume from "./components/Header/Navigation/Resume";
-import Contact from "./components/Header/Navigation/Contact";
+import About from "./components/Header/Nav/About";
+import Portfolio from "./components/Header/Nav/Portfolio";
+import Resume from "./components/Header/Nav/Resume";
+import Contact from "./components/Header/Nav/Contact";
 import Social from "./components/Footer";
 
 function App() {

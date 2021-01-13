@@ -1,4 +1,5 @@
 import React from 'react';
+import resume from "../../../assets/documents/Resume-Maxwell-Plumer.pdf";
 
 const About = () => {
 

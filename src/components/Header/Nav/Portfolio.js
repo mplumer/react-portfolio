@@ -1,21 +1,21 @@
 import React, {useState} from "react";
 import ProjectCard from '../../Project';
 import projects from '../../../projects.json';
-import Container from "../../Project/ProjectsWrapper";
+import Container from "../../Project/ProjectContainer";
 
-function Work(props) {
+function Project(props) {
   const [projectList] = useState(projects);
     return (
       <>
 <Container>
-          {projectList.map(work => (
+          {projectList.map(project => (
           <ProjectCard 
-          id = {work.id}
-          name = {work.name}
-          deployed = {work.deployed}
-          image = {work.image}
-          repo = {work.repo} 
-          key = {work.id} 
+          id = {project.id}
+          name = {project.name}
+          deployed = {project.deployed}
+          image = {project.image}
+          repo = {project.repo} 
+          key = {project.id} 
           />
         ))}
 </Container>
@@ -23,4 +23,4 @@ function Work(props) {
     );
   }
 
-export default Work;
+export default Project;

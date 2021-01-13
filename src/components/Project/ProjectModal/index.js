@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 
 
 function ProjectModal(props) {
@@ -14,7 +18,7 @@ function ProjectModal(props) {
                         <div className="row justify-content-center">
                             <div className="col-lg-8">
                             {/* Portfolio Modal - Title*/}
-                            <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Log Cabin</h2>
+                            <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">{props.name}</h2>
                             {/* Icon Divider*/}
                             <div className="divider-custom">
                                 <div className="divider-custom-line" />
@@ -22,9 +26,16 @@ function ProjectModal(props) {
                                 <div className="divider-custom-line" />
                             </div>
                             {/* Portfolio Modal - Image*/}
-                            <img className="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="" />
+                            <a href={props.deployed}>
+                            <img className="img-fluid rounded mb-5" src={props.image} alt={props.name} />
+                            </a>
                             {/* Portfolio Modal - Text*/}
-                            <p className="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                            <p className="mb-5">{props.text}</p>
+                            <button className="btn btn-primary" onClick={() => window.location.assign(`${props.deployed}`)} href={props.deployed}>
+                                <a className="github social-card" href={props.repo}>
+                                <FontAwesomeIcon icon={faGithub} size="1x" /> 
+                                </a>
+                            </button>
                             <button className="btn btn-primary" data-dismiss="modal">
                                 <i className="fas fa-times fa-fw" />
                                 Close Window

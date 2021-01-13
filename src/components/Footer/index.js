@@ -1,10 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faGithub,
-    faTwitter,
-    faLinkedin
-  } from "@fortawesome/free-brands-svg-icons"; 
 
 export default function Social() {
   return (
@@ -23,13 +17,17 @@ export default function Social() {
         {/* Footer Social Icons*/}
         <div className="col-lg-4 mb-5 mb-lg-0">
           <h4 className="text-uppercase mb-4">Around the Web</h4>
-          <a className="btn btn-outline-light btn-social mx-1" href="https://github.com/mplumer" className="fab fa-fw"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-          <a className="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/in/maxplumer"  className="fab fa-fw"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
-          <a className="btn btn-outline-light btn-social mx-1" href="https://twitter.com/mplumer12" className="fab fa-fw"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
+          <a className="btn btn-outline-light btn-social mx-1" href="https://github.com/mplumer" ><i className="fab fa-fw fa-github"></i></a>
+          <a className="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/in/maxplumer" ><i className="fab fa-fw fa-linkedin-in"></i></a>
+          <a className="btn btn-outline-light btn-social mx-1" href="https://twitter.com/mplumer12"><i className="fab fa-fw fa-twitter"></i></a>
         </div>
         {/* Copyright Section*/}
         <div className="copyright py-4 text-center text-white">
         <div className="container"><small>Copyright Max Plumer 2021</small></div>
+        </div>
+        {/* Scroll to Top Button (Only visible on small and extra-small screen sizes)*/}
+        <div className="scroll-to-top d-lg-none position-fixed">
+          <a className="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i className="fa fa-chevron-up" /></a>
         </div>
     </div>
     </div>

@@ -13,8 +13,7 @@ function Container(props) {
         <div className="divider-custom-line" />
       </div>
       {/* Portfolio Grid Items*/} 
-    <div className="wrapper">{props.children}</div>
-    <div className="row justify-content-center"></div>
+    <div className="container row justify-content-center">{props.children}</div>
     </div>
     </section>
   )}
