@@ -1,13 +1,15 @@
 import React, {useState} from "react";
 import ProjectCard from '../../Project';
 import projects from '../../../projects.json';
-import Container from "../../Project/ProjectContainer";
+import Wrapper from "../../Project/ProjectsWrapper";
+import Modal from '../../Project/ProjectModal'
 
 function Project(props) {
   const [projectList] = useState(projects);
     return (
       <>
-<Container>
+<Wrapper>
+        <Modal />
           {projectList.map(project => (
           <ProjectCard 
           id = {project.id}
@@ -15,10 +17,11 @@ function Project(props) {
           deployed = {project.deployed}
           image = {project.image}
           repo = {project.repo} 
+          text = {props.text}
           key = {project.id} 
           />
         ))}
-</Container>
+</Wrapper>
       </>
     );
   }

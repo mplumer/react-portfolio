@@ -1,6 +1,6 @@
 import React from "react";
 
-function Container(props) {
+function Wrapper(props) {
   return (
     <section className="page-section portfolio" id="portfolio">
     <div className="container card">
@@ -13,9 +13,9 @@ function Container(props) {
         <div className="divider-custom-line" />
       </div>
       {/* Portfolio Grid Items*/} 
-    <div className="container row justify-content-center">{props.children}</div>
+    <div className="wrapper row justify-content-center">{props.children}</div>
     </div>
     </section>
   )}
 
-export default Container;
+export default Wrapper;
