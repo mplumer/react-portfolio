@@ -1,9 +1,10 @@
 import React from 'react';
 import resume from "../../../assets/documents/Resume-Maxwell-Plumer.pdf";
 
-const About = () => {
+function About () {
 
     return (
+      <>
         <section className="page-section bg-primary text-white mb-0" id="about">
         <div className="container">
           {/* About Section Heading*/}
@@ -28,7 +29,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      
+    </>
     )
   }
   

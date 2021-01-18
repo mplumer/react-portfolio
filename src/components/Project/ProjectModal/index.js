@@ -1,19 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
+import 'react-responsive-modal/styles.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
+import WorkCard from '../index'
 
+function ProjectModal  (props)  {
+   
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
 
-function ProjectModal(props) {
     return (
-        <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex={-1} role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-            <div className="modal-dialog modal-xl" role="document">
-                <div className="modal-content">
-                <button className="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i className="fas fa-times" /></span>
-                </button>
-                <div className="modal-body text-center">
+        <>
+        <div>
+          <modal
+            open={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            center
+            container={WorkCard}
+            className="portfolio-modal"
+          >
+            <div className="modal-body text-center">
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-8">
@@ -31,22 +39,22 @@ function ProjectModal(props) {
                             </a>
                             {/* Portfolio Modal - Text*/}
                             <p className="mb-5">{props.text}</p>
+                            </div>
                             <button className="btn btn-primary" onClick={() => window.location.assign(`${props.deployed}`)} href={props.deployed}>
                                 <a className="github social-card" href={props.repo}>
                                 <FontAwesomeIcon icon={faGithub} size="1x" /> 
                                 </a>
                             </button>
-                            <button className="btn btn-primary" data-dismiss="modal">
-                                <i className="fas fa-times fa-fw" />
-                                Close Window
-                            </button>
-                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    )}  
+                </div>      
+          </modal>
+          </div>
+        </>
+      );
+    };
+
+    
+    
 
 export default ProjectModal;
