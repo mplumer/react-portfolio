@@ -29,6 +29,12 @@ body {
   margin-right: auto;
 }
 
+#nav-image {
+  width: 40px;
+  height:auto;
+  align-items: start;
+}
+
 .nav {
   margin-right: 40px;
   
@@ -62,11 +68,11 @@ body {
 ****************************/
 
 .hero {
-  background-image: url("https://github.com/jeffwjohn/Portfolio/blob/master/assets/images/JeffJohnston-img.png?raw=true");
+  background-image: url("../src/assets/images/portfolio/large-image.jpg");
   background-size: cover;
-  /* background-position: center; */
+  background-position:center; 
   background-repeat: no-repeat;
-  height: 600px;
+  height: 500px;
 }
 
 /***************************
